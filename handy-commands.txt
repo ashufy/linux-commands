@@ -1,0 +1,23 @@
+Packages (Ubuntu apt)
+####################################################################
+sudo apt update                             # refresh package lists
+sudo apt upgrade                            # upgrade packages
+sudo apt install git curl build-essential   # install apps
+sudo apt remove <pkg>                       # uninstall
+apt show <pkg>                              # details
+sudo apt autoremove --purge                 # cleanup leftover deps
+
+SSH & file transfer
+###########################################################
+ssh user@host                           # connect
+ssh -i ~/.ssh/id_rsa user@host          # with key
+sudo scp file.txt user@host:/tmp/       # copy file
+
+Create/rename/move/delete files
+#########################################################
+touch notes.txt                       # new empty file
+mkdir -p logs/2025/09                 # make nested dirs
+cp -r src/ src_backup/                # copy dir recursively
+mv report.txt reports/                # move/rename
+rm -i file.txt                        # interactive delete (safe)
+rm -rf old_logs/                      # recursive remove
